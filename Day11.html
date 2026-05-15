@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11</title>
+</head>
+<body>
+    <h2 id="head">Hello this is my day 11 task.</h2>
+    <button id="but">Click Me</button><br><br>
+    <form id="myform">
+        <label for = "name_input">Enter The Name:</label>
+        <input type="text" id="p1" placeholder="Enter Name">
+        <button type="submit">Submit</button>
+    </form><br><br>
+    <p id="para">This is for Background Color Change.</p><br>
+    <p>ID:-DV05WD00020</p>
+    <script>
+        let but = document.getElementById("but");
+        let head = document.getElementById("head");
+
+        but.addEventListener("click", function () {
+            head.innerText = "Heading Changed!";
+            head.style.color = "red";
+        });
+
+        let myform = document.getElementById("myform");
+            myform.addEventListener("submit", function(event){
+                event.preventDefault();
+                let name = document.getElementById("p1").value;
+                alert("Hello," + name);
+            });
+        let para = document.getElementById("para");
+        para.addEventListener("mouseover", function(){
+            para.style.backgroundColor = "#ffd54f"
+        });
+    </script>
+    <footer></footer>
+</body>
+</html>
